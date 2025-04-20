@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B009688">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <!-- Logo + Welcome + Slogan Section -->
+        <LinearLayout
+            android:id="@+id/loginHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/login_logo"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/gg"
+                android:transitionName="logo_image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/login_welcomeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ll"
+                    android:text="Agri - tech"
+                    android:textColor="#11A380"
+                    android:textSize="46sp" />
+
+                <TextView
+                    android:id="@+id/login_sloganText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ll"
+                    android:text="Empowering Farmers"
+                    android:textColor="#4E4E4E"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-14dp"
+            android:translationX="-1dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/jj" />
+
+        <TextView
+            android:id="@+id/phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Phone Number"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#009688"
+            android:fontFamily="@font/bun"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center" />
+
+        <!-- Animated Title -->
+        <TextSwitcher
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="#2E7D32"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Phone Number Input -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_showFlag="true"
+                app:ccp_showNameCode="false"
+                app:ccp_defaultNameCode="IN"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showFullName="false"
+                app:ccp_textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="Enter Mobile Number"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:digits="0123456789"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- OTP Section (Hidden Initially) -->
+        <!-- OTP Section (Hidden Initially) -->
+        <LinearLayout
+            android:id="@+id/otpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/otp1"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:autofillHints="smsOTP"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/otp_box"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/otp2"
+                style="@style/OtpBoxStyle"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/otp3"
+                style="@style/OtpBoxStyle"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/otp4"
+                style="@style/OtpBoxStyle"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/otp5"
+                style="@style/OtpBoxStyle"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/otp6"
+                style="@style/OtpBoxStyle" />
+        </LinearLayout>
+
+
+        <!-- Send OTP Button -->
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleLarge" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B009688"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gg"
+            android:contentDescription="App Logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/circle_bg"
+            android:padding="12dp" />
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agri-Tech"
+            android:fontFamily="@font/bun"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_marginTop="8dp" />
+
+        <!-- Slogan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empowering Farmers with Smart Tech"
+            android:fontFamily="@font/ll"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="24dp"
+            android:textAlignment="center" />
+
+        <!-- Remote Mode -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remote Mode Controls"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Control Cards -->
+        <include layout="@layout/remote_control_item" android:id="@+id/webcamControl" />
+        <include layout="@layout/remote_control_item" android:id="@+id/sprinklerControl" />
+        <include layout="@layout/remote_control_item" android:id="@+id/soundControl" />
+        <include layout="@layout/remote_control_item" android:id="@+id/flashControl" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/controlIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/controlLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:text="Remote Control"
+            android:textSize="20sp"
+            android:textColor="#000000" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/controlSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="#4CAF50"
+            app:trackTint="#009688" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

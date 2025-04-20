@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ball_color">#1F8A70</color>
+    <color name="teal_700">#1F8A70</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="switch_thumb">#4CAF50</color> <!-- ON state -->
+    <color name="switch_track">#A5D6A7</color> <!-- Track color -->
+
+</resources>

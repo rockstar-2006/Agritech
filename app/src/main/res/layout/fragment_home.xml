@@ -1,0 +1,190 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logo and App Title -->
+        <LinearLayout
+            android:id="@+id/loginHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/login_logo"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/gg"
+                android:transitionName="logo_image" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/login_welcomeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ll"
+                    android:text="Agri - tech"
+                    android:textColor="#11A380"
+                    android:textSize="46sp" />
+
+                <TextView
+                    android:id="@+id/login_sloganText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ll"
+                    android:text="Empowering Farmers"
+                    android:textColor="#4E4E4E"
+                    android:textSize="24sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Alert Container -->
+        <LinearLayout
+            android:id="@+id/alertContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:elevation="8dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="visible">
+
+            <!-- Animated Alert Title -->
+            <TextView
+                android:id="@+id/alertTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Horse Detected!"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:paddingBottom="6dp" />
+
+            <!-- Alert Message -->
+            <TextView
+                android:id="@+id/alertMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alert message goes here"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/alertTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2025-04-10 22:19:43"
+                android:textColor="#555"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Alert Image -->
+            <ImageView
+                android:id="@+id/alertImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/card_background"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+        </LinearLayout>
+
+        <!-- Divider for Contact Section -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCC"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Phone Numbers Section -->
+        <LinearLayout
+            android:id="@+id/phoneNumbersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <!-- Example of one contact displayed with emojis -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:background="@drawable/card_background"
+                android:elevation="4dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Contact Name with Emoji -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ramesh Kumar"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+
+                <!-- Contact Phone Number with Emoji -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📞 +91 9876543210"
+                    android:textSize="14sp"
+                    android:textColor="#555"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Add Phone Number Button -->
+        <ImageView
+            android:id="@+id/addPhoneIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_add"
+            android:contentDescription="Add phone"
+            android:padding="8dp"
+            android:background="@drawable/rounded_button_bg"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

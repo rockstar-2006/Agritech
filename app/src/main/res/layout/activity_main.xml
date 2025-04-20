@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background">
+    \
+
+
+    <!-- Ripple 1 -->
+    <FrameLayout
+        android:id="@+id/ripple1"
+        android:layout_width="120dp"
+        android:visibility="invisible"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ripple_circle" />
+
+    <!-- Ripple 2 -->
+    <FrameLayout
+        android:id="@+id/ripple2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ripple_circle" />
+
+    <!-- Ripple 3 -->
+    <FrameLayout
+        android:id="@+id/ripple3"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:background="@drawable/ripple_circle" />
+
+    <!-- Logo Image in center -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="152dp"
+        android:layout_height="152dp"
+        android:transitionName="logo_image"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cc"
+        android:visibility="invisible" />
+
+    <!-- App Name below the logo -->
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:transitionName="logo_text"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/ff" />
+    <com.example.agri_tech.TypeWriter
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/ff"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/developed_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by Fab Four"
+        android:textColor="#FAF5F5"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:visibility="invisible"
+        android:fontFamily="@font/ff"
+        />
+
+
+</RelativeLayout>

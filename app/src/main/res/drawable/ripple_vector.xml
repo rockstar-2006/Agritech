@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <group
+        android:name="ripple"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:pivotX="50"
+        android:pivotY="50">
+
+        <path
+            android:fillColor="#A3D8F4"
+            android:pathData="M50,0
+                              A50,50 0 1,1 49.9,0.1Z"
+            android:strokeWidth="0" />
+    </group>
+</vector>

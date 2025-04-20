@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_title">⚠ ಎಚ್ಚರಿಕೆ</string>
+    <string name="sheep_detected">ಕೋಸು ಪತ್ತೆಹಚ್ಚಲಾಗಿದೆ!</string>
+    <string name="detected_time">2025-04-15 16:43:09</string> <!-- Or dynamic string if needed -->
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">ಮುಖಪುಟ</string>
+    <string name="nav_list">ಪಟ್ಟಿ</string>
+    <string name="nav_notifications">ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="nav_profile">ಪ್ರೊಫೈಲ್</string>
+
+    <!-- Floating Button -->
+    <string name="add">ಸೇರಿಸಿ</string>
+</resources>
