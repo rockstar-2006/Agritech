@@ -1,0 +1,61 @@
+Bluetooth HC-05 Code 
+
+#include <Servo.h>
+#include <SoftwareSerial.h>
+
+#define trigPin 10
+#define echoPin 11
+
+Servo myservo;
+SoftwareSerial BT(2, 3); // RX, TX — Connect TX of HC-05 to pin 2 (via voltage divider)
+
+long duration;
+int distance;
+
+int getDistance() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH, 30000); // Timeout = 30ms
+  if (duration == 0) return -1;
+
+  return duration * 0.034 / 2;
+}
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  myservo.attach(12); // Servo motor on pin 12
+
+  Serial.begin(9600);    // For debugging
+  BT.begin(9600);        // Bluetooth HC-05 default baud rate
+}
+
+void loop() {
+  // Sweep from 15° to 165°
+  for (int angle = 15; angle <= 165; angle++) {
+    myservo.write(angle);
+    delay(10);
+    int dist = getDistance();
+    sendRadarData(angle, dist);
+    delay(10);
+  }
+
+  // Sweep from 165° back to 15°
+  for (int angle = 165; angle >= 15; angle--) {
+    myservo.write(angle);
+    delay(10);
+    int dist = getDistance();
+    sendRadarData(angle, dist);
+    delay(10);
+  }
+}
+
+void sendRadarData(int angle, int dist) {
+  String data = "Angle: " + String(angle) + " | Distance: " + String(dist) + " cm";
+  BT.println(data);        // Send to Android app via HC-05
+  Serial.println(data);    // Optional: print to Serial Monitor for debugging
+}
